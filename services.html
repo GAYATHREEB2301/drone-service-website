@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | SkyHigh Drones</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .service-detail {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-detail:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .service-text {
+            flex: 1;
+        }
+
+        .service-img {
+            flex: 1;
+        }
+
+        .service-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        @media(max-width: 768px) {
+
+            .service-detail,
+            .service-detail:nth-child(even) {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-paper-plane"></i> <span>SkyHigh</span> Services</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="tech.html">Tech & Equipment</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Professional Drone Services</h1>
+        <p>Comprehensive aerial solutions tailored to your industry needs.</p>
+    </div>
+
+    <section>
+        <div class="service-detail">
+            <div class="service-text">
+                <h2>Industrial Inspections</h2>
+                <p>Reduce risk and cost with our autonomous drone inspections. We provide high-resolution visual and
+                    thermal imagery for assets such as wind turbines, solar farms, bridges, and power lines. Our reports
+                    help you identify defects early and plan maintenance effectively.</p>
+                <ul style="margin-top: 1rem; margin-left: 1rem; list-style-type: disc;">
+                    <li>Thermal Imaging</li>
+                    <li>Rust & Corrosion Detection</li>
+                    <li>Progress Monitoring</li>
+                </ul>
+            </div>
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1521405924368-64c5b84bec60?q=80&w=2070&auto=format&fit=crop"
+                    alt="Drone Inspection">
+            </div>
+        </div>
+
+        <div class="service-detail">
+            <div class="service-text">
+                <h2>Mapping & Surveying (LiDAR)</h2>
+                <p>We deliver survey-grade accuracy using RTK/PPK enabled drones and LiDAR sensors. Create 3D point
+                    clouds, orthomosaics, and digital elevation models (DEM) for construction, mining, and agriculture.
+                </p>
+                <ul style="margin-top: 1rem; margin-left: 1rem; list-style-type: disc;">
+                    <li>3D Modeling</li>
+                    <li>Volumetric Measurements</li>
+                    <li>Topographic Surveys</li>
+                </ul>
+            </div>
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2070&auto=format&fit=crop"
+                    alt="Drone Mapping">
+            </div>
+        </div>
+
+        <div class="service-detail">
+            <div class="service-text">
+                <h2>Aerial Cinematography</h2>
+                <p>Capture the world from a new perspective. Our dual-operator teams use cinema-grade drones to film
+                    commercials, real estate, and live events in stunning 5.2K resolution.</p>
+            </div>
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?q=80&w=2069&auto=format&fit=crop"
+                    alt="Drone Camera">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Duplicated -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <a href="index.html" style="font-size: 1.5rem; font-weight: 700;">
+                        <i class="fas fa-paper-plane" style="color: var(--primary-color);"></i>
+                        SkyHigh Services
+                    </a>
+                </div>
+                <p style="margin-top: 1rem;">Providing the highest quality drone services since 2015. Certified pilots,
+                    cutting-edge tech.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="training.html">Pilot Training</a></li>
+                    <li><a href="tech.html">Equipment Specs</a></li>
+                    <li><a href="#">Safety Protocols</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Sky Way, Tech City, USA</li>
+                    <li><i class="fas fa-envelope"></i> info@skyhighdrones.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                </ul>
+                <div class="social-icons" style="margin-top: 1rem; display: flex; gap: 1rem;">
+                    <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SkyHigh Drone Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></div>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

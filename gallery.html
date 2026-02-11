@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery | SkyHigh Drones</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h3 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-overlay p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-paper-plane"></i> <span>SkyHigh</span> Services</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tech.html">Tech & Equipment</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="training.html">Training</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-secondary">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                <button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+            <div class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero"
+        style="height: 40vh; background-image: url('https://images.unsplash.com/photo-1550529596-3c224213d2f9?q=80&w=2070&auto=format&fit=crop');">
+        <div class="hero-content">
+            <h1>Project Gallery</h1>
+            <p>Highlights from our recent missions across the globe.</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=2070&auto=format&fit=crop"
+                    alt="City Aerial">
+                <div class="gallery-overlay">
+                    <h3>Urban Planning</h3>
+                    <p>Downtown City Mapping</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2070&auto=format&fit=crop"
+                    alt="Construction">
+                <div class="gallery-overlay">
+                    <h3>Construction Site</h3>
+                    <p>Site Progress Monitoring</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1521405924368-64c5b84bec60?q=80&w=2070&auto=format&fit=crop"
+                    alt="Inspection">
+                <div class="gallery-overlay">
+                    <h3>Wind Turbine</h3>
+                    <p>Visual Inspection</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?q=80&w=2069&auto=format&fit=crop"
+                    alt="Nature">
+                <div class="gallery-overlay">
+                    <h3>National Park</h3>
+                    <p>Wildlife Conservation Survey</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1579829366248-204fe8413f31?q=80&w=2070&auto=format&fit=crop"
+                    alt="Agriculture">
+                <div class="gallery-overlay">
+                    <h3>Precision Ag</h3>
+                    <p>Crop Health Analysis</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1550529596-3c224213d2f9?q=80&w=2070&auto=format&fit=crop"
+                    alt="Events">
+                <div class="gallery-overlay">
+                    <h3>Music Festival</h3>
+                    <p>Live Event Coverage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <a href="index.html" style="font-size: 1.5rem; font-weight: 700;">
+                        <i class="fas fa-paper-plane" style="color: var(--primary-color);"></i>
+                        SkyHigh Services
+                    </a>
+                </div>
+                <p style="margin-top: 1rem;">Providing the highest quality drone services since 2015.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="training.html">Pilot Training</a></li>
+                    <li><a href="tech.html">Equipment Specs</a></li>
+                    <li><a href="gallery.html">Project Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Sky Way, Tech City, USA</li>
+                    <li><i class="fas fa-envelope"></i> info@skyhighdrones.com</li>
+                </ul>
+                <div class="social-icons" style="margin-top: 1rem; display: flex; gap: 1rem;">
+                    <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SkyHigh Drone Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></div>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
