@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyHigh Drones | Premium Drone Services Company</title>
+    <title>SkyHigh Drones | Home 2</title>
     <meta name="description"
         content="Leading drone services for inspections, mapping, photography, and training using cutting-edge technology.">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="styles/style.css">
-
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -29,8 +25,8 @@
 
             <nav>
                 <ul>
-                    <li><a href="index.html" class="active">Home 1</a></li>
-                    <li><a href="home2.html">Home 2</a></li>
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="home2.html" class="active">Home 2</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="tech.html">Tech & Equipment</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
@@ -54,18 +50,16 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Variant) -->
     <section class="hero"
-        style="background-image: url('https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=2070&auto=format&fit=crop');">
-        <!-- Fallback image from Unsplash since generation failed, explicitly allowed to use external resources for image placeholders if generation fails -->
+        style="background-image: url('https://images.unsplash.com/photo-1527977966376-1c8408f9f108?q=80&w=2067&auto=format&fit=crop');">
         <div class="hero-content">
-            <h1>Elevating Perspectives with <br> <span>Precision Drone Technology</span></h1>
-            <p>We provide industry-leading aerial solutions including inspections, mapping, photography, and
-                professional pilot training.</p>
+            <h1>Aerial Intelligence for <br> <span>Tomorrow's World</span></h1>
+            <p>From complex data acquisition to high-end cinematography, we deliver results that matter.</p>
             <div class="hero-buttons">
-                <a href="services.html" class="btn btn-primary">Our Services</a>
-                <a href="contact.html" class="btn btn-secondary" style="color: white; border-color: white;">Get a
-                    Quote</a>
+                <a href="contact.html" class="btn btn-primary">Start a Project</a>
+                <a href="gallery.html" class="btn btn-secondary" style="color: white; border-color: white;">View
+                    Portfolio</a>
             </div>
         </div>
     </section>
@@ -73,31 +67,30 @@
     <!-- Services Preview -->
     <section id="services-preview">
         <div class="section-title">
-            <h2>Our Core Services</h2>
-            <p>Delivering high-quality data and stunning visuals across multiple industries.</p>
+            <h2>Why Choose SkyHigh?</h2>
+            <p>Experience, Technology, and Safety are at the core of everything we do.</p>
         </div>
         <div class="grid-3">
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1521405924368-64c5b84bec60?q=80&w=2070&auto=format&fit=crop"
                     alt="Aerial Inspection">
-                <h3>Industrial Inspections</h3>
-                <p>Detailed inspections for infrastructure, energy, and construction projects using thermal and high-res
-                    imaging.</p>
-                <a href="services.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h3>Certified Experts</h3>
+                <p>Our pilots are FAA Part 107 certified with thousands of flight hours in diverse environments.</p>
+                <a href="about.html" class="btn-link">Meet the Team <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=2070&auto=format&fit=crop"
                     alt="Mapping & Surveying">
-                <h3>Mapping & Surveying</h3>
-                <p>Precise photogrammetry and LiDAR mapping for accurate topographic data and 3D modeling.</p>
-                <a href="services.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h3>Advanced Sensors</h3>
+                <p>We utilize the latest in thermal, LiDAR, and multispectral imaging technology.</p>
+                <a href="tech.html" class="btn-link">See Equipment <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?q=80&w=2069&auto=format&fit=crop"
                     alt="Drone Photography">
-                <h3>Cinematography</h3>
-                <p>Capture breathtaking 4K/8K aerial footage for real estate, events, and film production.</p>
-                <a href="services.html" class="btn-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h3>Safety First</h3>
+                <p>Comprehensive safety management systems and insurance coverage for peace of mind.</p>
+                <a href="#" class="btn-link">View Protocols <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -161,13 +154,9 @@
     <!-- Scripts -->
     <script src="scripts/main.js"></script>
     <script>
-        // Inline Mobile Menu Logic for index (since JS file handles click)
-        // Just need to ensure CSS media query displays the button
-        // Added style="display: none" inline for desktop, CSS media query handles block display
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const nav = document.querySelector('nav ul');
 
-        // Ensure proper display handling via CSS class, this script is just fallback
         if (window.innerWidth <= 768) {
             mobileBtn.style.display = 'block';
         }
