@@ -68,13 +68,17 @@ document.addEventListener('DOMContentLoaded', () => {
                                 if (origIcon) origIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
                             }
                         });
-                        // Set initial state of cloned toggle
-                        const isDark = document.body.classList.contains('dark-mode');
-                        const clonedIcon = clonedToggle.querySelector('i');
-                        if (clonedIcon) clonedIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
                     }
 
                     navMenu.appendChild(clone);
+                }
+
+                // Sync state whenever menu is opened
+                const mobileToggle = document.getElementById('theme-toggle-mobile');
+                if (mobileToggle) {
+                    const isDark = document.body.classList.contains('dark-mode');
+                    const mIcon = mobileToggle.querySelector('i');
+                    if (mIcon) mIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
                 }
             } else {
                 icon.className = 'fas fa-bars';
