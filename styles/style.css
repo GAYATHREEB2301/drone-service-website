@@ -548,6 +548,5 @@ footer {
 
     .header-actions {
         display: none;
-        /* In a real app, we'd clone these into the nav menu for mobile */
     }
 }

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggleBtn.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             const isDark = body.classList.contains('dark-mode');
-            
+
             // Update Icon
             if (icon) {
                 icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
@@ -29,29 +29,62 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Logic
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.querySelector('nav ul');
+    const headerActions = document.querySelector('.header-actions');
 
     if (mobileMenuBtn && navMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active');
-            
-            // Toggle icon between bars and times
-            const menuIcon = mobileMenuBtn.querySelector('i');
-            if (menuIcon) {
-                if (navMenu.classList.contains('active')) {
-                    menuIcon.classList.remove('fa-bars');
-                    menuIcon.classList.add('fa-times');
-                } else {
-                    menuIcon.classList.remove('fa-times');
-                    menuIcon.classList.add('fa-bars');
+
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.className = 'fas fa-times';
+
+                // Clone header actions into mobile menu if not already there
+                if (!document.getElementById('mobile-actions-clone') && headerActions) {
+                    const clone = headerActions.cloneNode(true);
+                    clone.id = 'mobile-actions-clone';
+                    clone.style.display = 'flex';
+                    clone.style.flexDirection = 'column';
+                    clone.style.marginTop = '1rem';
+                    clone.style.gap = '1rem';
+
+                    // Re-attach theme toggle listener to cloned button
+                    const clonedToggle = clone.querySelector('#theme-toggle');
+                    if (clonedToggle) {
+                        clonedToggle.id = 'theme-toggle-mobile'; // Unique ID for clone
+
+                        clonedToggle.addEventListener('click', (e) => {
+                            e.preventDefault(); // Prevent bubbling issues
+                            document.body.classList.toggle('dark-mode');
+                            const isDark = document.body.classList.contains('dark-mode');
+                            const clonedIcon = clonedToggle.querySelector('i');
+                            if (clonedIcon) clonedIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+                            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+
+                            // Also update the original toggle icon to stay in sync
+                            const originalToggle = document.getElementById('theme-toggle');
+                            if (originalToggle) {
+                                const origIcon = originalToggle.querySelector('i');
+                                if (origIcon) origIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+                            }
+                        });
+                        // Set initial state of cloned toggle
+                        const isDark = document.body.classList.contains('dark-mode');
+                        const clonedIcon = clonedToggle.querySelector('i');
+                        if (clonedIcon) clonedIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+                    }
+
+                    navMenu.appendChild(clone);
                 }
+            } else {
+                icon.className = 'fas fa-bars';
             }
         });
     }
 
     // Back to Top Button
     const backToTopBtn = document.getElementById('back-to-top');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
             backToTopBtn.classList.add('visible');
